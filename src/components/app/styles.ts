@@ -1,1 +1,1 @@
-export const appContainer = 'bg-slate-500 min-h-screen text-white flex justify-center items-center';
+export const appContainer = 'bg-zinc-900 min-h-screen text-white flex justify-center items-center';
