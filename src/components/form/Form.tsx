@@ -1,6 +1,7 @@
 import InputForm from '../inputForm/InputForm';
 import useForm from '../../hooks/useForm/useForm';
 import { formContainer } from './styles';
+import Button from '../button/Button';
 
 const Form = () => {
   const {
@@ -16,6 +17,7 @@ const Form = () => {
     setCountry,
     setBirthdate,
     setPhoto,
+    submitValues,
   } = useForm();
 
   return (
@@ -25,7 +27,8 @@ const Form = () => {
       <InputForm label="Country of residence" value={country} onChange={setCountry} />
       <InputForm label="Date of birth" value={birthdate} onChange={setBirthdate} inputProps={{ type: 'date' }} />
       <InputForm label="Photo" value={photo} onChange={setPhoto} inputProps={{ type: 'file' }} />
-      <button>here</button>
+      <br />
+      <Button label="Submit" onClick={submitValues} />
     </div>
   );
 }
