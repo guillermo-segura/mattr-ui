@@ -15,6 +15,7 @@ export interface UseForm {
   setCountry: (value: string) => void,
   setBirthdate: (value: string) => void,
   setPhoto: (value: string) => void,
+  submitValues: () => void;
 }
 
 const useForm = (): UseForm => {
@@ -32,6 +33,10 @@ const useForm = (): UseForm => {
     photo,
   };
 
+  const submitValues = () => {
+    console.log('Values submitted', values);
+  };
+
   return {
     values,
     setGivenName,
@@ -39,6 +44,7 @@ const useForm = (): UseForm => {
     setCountry,
     setBirthdate,
     setPhoto,
+    submitValues,
   };
 };
 
