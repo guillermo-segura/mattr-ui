@@ -1,12 +1,10 @@
-import React from 'react';
-import './App.css';
+import Form from '../form/Form';
+import { appContainer } from './styles';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <div className={appContainer}>
+      <Form />
     </div>
   );
 }
