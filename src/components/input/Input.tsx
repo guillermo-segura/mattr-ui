@@ -1,8 +1,10 @@
-import React, { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
+
+import { input, fileInput } from './styles';
 
 const Input = (inputProps: InputHTMLAttributes<HTMLInputElement>): JSX.Element => {
   return (
-    <input className='border rounded-sm h-10 text-black pl-2 outline-0 w-80' type='text' {...inputProps} />
+    <input className={inputProps.type === 'file' ? fileInput : input} type='text' {...inputProps} />
   );
 };
 
