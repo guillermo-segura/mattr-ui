@@ -6,7 +6,7 @@ import css from './classnames'
 describe('Button Component', () => {
   const onClickMock = jest.fn();
   const buttonProps: ButtonProps = {
-    label: 'Click me',
+    label: 'CLICK ME',
     onClick: onClickMock,
   };
 
