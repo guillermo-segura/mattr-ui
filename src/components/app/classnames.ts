@@ -1,5 +1,5 @@
 const classnames = {
-  container: 'bg-zinc-900 min-h-screen text-white flex justify-center items-center',
+  container: 'bg-white min-h-screen flex justify-center items-center',
 };
 
 export default classnames;

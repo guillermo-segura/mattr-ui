@@ -16,7 +16,7 @@ const InputForm = ({ label, value, onChange, inputProps }: InputFormProps): JSX.
   const id = `inputform-${getIdFromLabel(label)}`;
   return (
     <div className={css.container} data-testid="inputform-container">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={css.label}>{label}</label>
       <Input
         id={id}
         data-testid={id}

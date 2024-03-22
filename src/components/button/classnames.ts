@@ -1,5 +1,5 @@
 const classnames = {
-  button: 'bg-sky-500 px-6 py-2 w-fit rounded-sm self-center hover:bg-sky-400 disabled:opacity-75',
+  button: 'bg-mattr-blue text-white drop-shadow-md transition-colors px-8 py-3.5 w-fit rounded-full self-center hover:bg-mattr-blue-dark disabled:opacity-75 font-medium font-semibold',
 };
 
 export default classnames;
