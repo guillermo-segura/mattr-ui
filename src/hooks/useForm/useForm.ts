@@ -12,6 +12,7 @@ interface Values {
 export interface UseForm {
   values: Values;
   isSubmitting: boolean;
+  isCompleted: boolean;
   setGivenName: (value: string) => void,
   setEmail: (value: string) => void,
   setCountryOfResidence: (value: string) => void,
@@ -44,9 +45,12 @@ const useForm = (): UseForm => {
     });
   };
 
+  const isCompleted = Object.values(values).every((value) => !!value);
+
   return {
     values,
     isSubmitting,
+    isCompleted,
     setGivenName,
     setEmail,
     setCountryOfResidence,

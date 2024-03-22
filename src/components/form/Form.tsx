@@ -13,6 +13,7 @@ const Form = () => {
       photo,
     },
     isSubmitting,
+    isCompleted,
     setGivenName,
     setEmail,
     setCountryOfResidence,
@@ -57,7 +58,7 @@ const Form = () => {
       <Button
         label={isSubmitting ? 'Submitting' : 'Submit'}
         onClick={submitValues}
-        disabled={isSubmitting}
+        disabled={isSubmitting || !isCompleted}
       />
     </div>
   );

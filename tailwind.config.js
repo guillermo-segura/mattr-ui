@@ -9,6 +9,7 @@ module.exports = {
         'mattr-blue-dark': '#17147e',
         'mattr-grey-dark': '#333233',
         'mattr-grey': '#635E61',
+        'mattr-grey-light': '#DEDEDE',
       },
     },
   },
