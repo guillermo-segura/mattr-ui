@@ -1,3 +1,28 @@
+# MATTR Optional Challenge
+
+Design a web UI that allows you to enter the details of a Personal Identity credential by simply filling out a form on a web application. Design the page using any CSS framework of your choice (e.g., Tailwind, MaterialUI, or just raw CSS).
+
+This credential should contain at least the following fields:
+
+- Given Name
+- Email
+- Country of residence
+- Date of birth
+- A photo
+
+## Result
+
+For this challenge I've used React.JS and Tailwind as my CSS framework.
+
+![alt text](https://github.com/guillermo-segura/mattr-vii-test-fe/blob/main/media/images/empty_form.png?raw=true)
+
+![alt text](https://github.com/guillermo-segura/mattr-vii-test-fe/blob/main/media/images/filled_form.png?raw=true)
+
+![alt text](https://github.com/guillermo-segura/mattr-vii-test-fe/blob/main/media/images/request_body.png?raw=true)
+
+![alt text](https://github.com/guillermo-segura/mattr-vii-test-fe/blob/main/media/images/server_request.png?raw=true)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
