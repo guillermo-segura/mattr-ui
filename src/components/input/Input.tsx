@@ -1,11 +1,13 @@
 import { InputHTMLAttributes } from 'react';
 
-import { input, fileInput } from './styles';
+import css from './classnames';
 
-const Input = (inputProps: InputHTMLAttributes<HTMLInputElement>): JSX.Element => {
-  return (
-    <input className={inputProps.type === 'file' ? fileInput : input} type='text' {...inputProps} />
-  );
-};
+const Input = (inputProps: InputHTMLAttributes<HTMLInputElement>): JSX.Element => (
+  <input
+    className={inputProps?.type === 'file' ? css.fileInput : css.input}
+    type='text'
+    {...inputProps}
+  />
+);
 
 export default Input;
