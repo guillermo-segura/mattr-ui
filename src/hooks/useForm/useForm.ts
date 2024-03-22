@@ -39,7 +39,6 @@ const useForm = (): UseForm => {
 
   const submitValues = () => {
     setIsSubmitting(true);
-    console.log(mattrApi.post('/api/issue-credential', values));
     mattrApi.post('/api/issue-credential', values).finally(() => {
       setIsSubmitting(false);
     });
