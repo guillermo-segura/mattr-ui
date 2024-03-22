@@ -13,9 +13,13 @@ export interface InputFormProps {
 const InputForm = ({ label, value, onChange, inputProps }: InputFormProps): JSX.Element => {
   const onInputChange = (e: React.FormEvent<HTMLInputElement>) => onChange(e.currentTarget.value);
   return (
-    <div className={css.container}>
+    <div className={css.container} data-testid="inputform-container">
       <label>{label}</label>
-      <Input value={value} onChange={onInputChange} {...inputProps} />
+      <Input
+        value={value}
+        onChange={onInputChange}
+        {...inputProps}
+      />
     </div>
   );
 }
