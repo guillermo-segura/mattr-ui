@@ -20,8 +20,9 @@ const Form = () => {
     submitValues,
   } = useForm();
 
+
   return (
-    <div className={css.container}>
+    <div className={css.container} data-testid="form-container">
       <InputForm label="Given name" value={givenName} onChange={setGivenName} />
       <InputForm label="Email" value={email} onChange={setEmail} inputProps={{ type: 'email' }} />
       <InputForm label="Country of residence" value={countryOfResidence} onChange={setCountryOfResidence} />
