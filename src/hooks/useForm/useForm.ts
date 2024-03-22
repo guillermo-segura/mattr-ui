@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import mattrApi from '../../api/mattr';
 
+// THIS SHOULD BE COMING FROM LOCALSTORAGE OR OTHER SOURCE
+const WALLET_DID = 'did:key:z6MkqW5J8VadfM7bYWKAtMrVrZ1JnsuEnPvPiTqmFV3ecVz7';
+
 interface Values {
   givenName: string;
   email: string;
@@ -39,7 +42,7 @@ const useForm = (): UseForm => {
 
   const submitValues = () => {
     setIsSubmitting(true);
-    mattrApi.post('/api/issue-credential', values).finally(() => {
+    mattrApi.post('/api/issue-credential', { ...values, walletDid: WALLET_DID }).finally(() => {
       setIsSubmitting(false);
     });
   };
