@@ -1,7 +1,7 @@
 import InputForm from '../inputForm/InputForm';
 import useForm from '../../hooks/useForm/useForm';
-import { formContainer } from './styles';
 import Button from '../button/Button';
+import css from './classnames';
 
 const Form = () => {
   const {
@@ -21,7 +21,7 @@ const Form = () => {
   } = useForm();
 
   return (
-    <div className={formContainer}>
+    <div className={css.container}>
       <InputForm label="Given name" value={givenName} onChange={setGivenName} />
       <InputForm label="Email" value={email} onChange={setEmail} inputProps={{ type: 'email' }} />
       <InputForm label="Country of residence" value={countryOfResidence} onChange={setCountryOfResidence} />
