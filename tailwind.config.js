@@ -7,6 +7,8 @@ module.exports = {
         'mattr-blue-light': '#F0F0FF',
         'mattr-blue': '#2f29fc',
         'mattr-blue-dark': '#17147e',
+        'mattr-grey-dark': '#333233',
+        'mattr-grey': '#635E61',
       },
     },
   },
