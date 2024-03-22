@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 
 interface Values {
   givenName: string;
@@ -35,6 +36,13 @@ const useForm = (): UseForm => {
 
   const submitValues = () => {
     console.log('Values submitted', values);
+    axios.post('http://localhost:3001/api/issue-credential', {
+      givenName: '',
+      email: '',
+      countryOfResidence: '',
+      dateOfBirth: '',
+      photo: '',
+    });
   };
 
   return {
