@@ -8,7 +8,7 @@ export interface ButtonProps {
 
 const Button = ({ label, onClick, disabled }: ButtonProps): JSX.Element => (
   <button className={css.button} onClick={onClick} disabled={disabled}>
-    {label}
+    {label.toUpperCase()}
   </button>
 );
 
