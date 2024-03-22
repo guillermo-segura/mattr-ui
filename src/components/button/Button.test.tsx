@@ -14,6 +14,14 @@ describe('Button Component', () => {
     render(<Button {...buttonProps} />);
     const buttonElement = screen.getByText(buttonProps.label);
     expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).not.toHaveAttribute('disabled');
+  });
+
+  test('renders the Button component with correct disabled state', () => {
+    render(<Button {...buttonProps} disabled />);
+    const buttonElement = screen.getByText(buttonProps.label);
+    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toHaveAttribute('disabled');
   });
 
   test('calls onClick function when button is clicked', () => {

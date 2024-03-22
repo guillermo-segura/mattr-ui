@@ -12,6 +12,7 @@ const Form = () => {
       dateOfBirth,
       photo,
     },
+    isSubmitting,
     setGivenName,
     setEmail,
     setCountryOfResidence,
@@ -29,7 +30,7 @@ const Form = () => {
       <InputForm label="Date of birth" value={dateOfBirth} onChange={setDateOfBirth} inputProps={{ type: 'date' }} />
       <InputForm label="Photo" value={photo} onChange={setPhoto} inputProps={{ type: 'file' }} />
       <br />
-      <Button label="Submit" onClick={submitValues} />
+      <Button label={isSubmitting ? 'Submitting' : 'Submit'} onClick={submitValues} disabled={isSubmitting} />
     </div>
   );
 }
