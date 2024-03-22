@@ -51,7 +51,7 @@ const Form = () => {
         label="Photo"
         value={photo}
         onChange={setPhoto}
-        inputProps={{ type: 'file' }}
+        inputProps={{ type: 'file', accept: 'image/png, image/jpeg' }}
       />
       <br />
       <Button
