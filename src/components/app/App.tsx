@@ -1,12 +1,10 @@
 import Form from '../form/Form';
-import { appContainer } from './styles';
+import css from './classnames';
 
-function App() {
-  return (
-    <div className={appContainer}>
-      <Form />
-    </div>
-  );
-}
+const App = () => (
+  <div className={css.container} data-testid="app-container">
+    <Form />
+  </div>
+);
 
 export default App;
