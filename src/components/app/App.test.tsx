@@ -1,9 +1,18 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('../form/Form', () => () => <div data-testid="form-component"></div>);
+
+describe('App Component', () => {
+  test('renders the App component', () => {
+    render(<App />);
+    const appContainer = screen.getByTestId('app-container');
+    expect(appContainer).toBeInTheDocument();
+  });
+
+  test('renders the Form component inside App', () => {
+    render(<App />);
+    const formComponent = screen.getByTestId('form-component');
+    expect(formComponent).toBeInTheDocument();
+  });
 });
