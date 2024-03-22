@@ -35,7 +35,6 @@ const useForm = (): UseForm => {
   };
 
   const submitValues = () => {
-    console.log('Values submitted', values);
     mattrApi.post('/api/issue-credential', values);
   };
 
