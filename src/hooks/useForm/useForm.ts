@@ -11,6 +11,7 @@ interface Values {
 
 export interface UseForm {
   values: Values;
+  isSubmitting: boolean;
   setGivenName: (value: string) => void,
   setEmail: (value: string) => void,
   setCountryOfResidence: (value: string) => void,
@@ -25,6 +26,7 @@ const useForm = (): UseForm => {
   const [countryOfResidence, setCountryOfResidence] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [photo, setPhoto] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const values = {
     givenName,
@@ -35,11 +37,16 @@ const useForm = (): UseForm => {
   };
 
   const submitValues = () => {
-    mattrApi.post('/api/issue-credential', values);
+    setIsSubmitting(true);
+    console.log(mattrApi.post('/api/issue-credential', values));
+    mattrApi.post('/api/issue-credential', values).finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   return {
     values,
+    isSubmitting,
     setGivenName,
     setEmail,
     setCountryOfResidence,
