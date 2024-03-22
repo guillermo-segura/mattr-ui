@@ -1,4 +1,4 @@
-import { button } from "./styles";
+import css from "./classnames";
 
 export interface ButtonProps {
   label: string;
@@ -6,7 +6,11 @@ export interface ButtonProps {
 };
 
 const Button = ({ label, onClick }: ButtonProps): JSX.Element => {
-  return <button className={button} onClick={onClick}>{label}</button>;
+  return (
+    <button className={css.button} onClick={onClick}>
+      {label}
+    </button>
+  );
 };
 
 export default Button;
