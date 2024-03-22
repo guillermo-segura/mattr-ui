@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+
 import App from './App';
 
 jest.mock('../form/Form', () => () => <div data-testid="form-component"></div>);

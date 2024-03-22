@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // for additional matchers
+
 import Button, { ButtonProps } from './Button';
 import css from './classnames'
 
