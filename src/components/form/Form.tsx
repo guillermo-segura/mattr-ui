@@ -8,14 +8,14 @@ const Form = () => {
     values: {
       givenName,
       email,
-      country,
-      birthdate,
+      countryOfResidence,
+      dateOfBirth,
       photo,
     },
     setGivenName,
     setEmail,
-    setCountry,
-    setBirthdate,
+    setCountryOfResidence,
+    setDateOfBirth,
     setPhoto,
     submitValues,
   } = useForm();
@@ -24,8 +24,8 @@ const Form = () => {
     <div className={formContainer}>
       <InputForm label="Given name" value={givenName} onChange={setGivenName} />
       <InputForm label="Email" value={email} onChange={setEmail} inputProps={{ type: 'email' }} />
-      <InputForm label="Country of residence" value={country} onChange={setCountry} />
-      <InputForm label="Date of birth" value={birthdate} onChange={setBirthdate} inputProps={{ type: 'date' }} />
+      <InputForm label="Country of residence" value={countryOfResidence} onChange={setCountryOfResidence} />
+      <InputForm label="Date of birth" value={dateOfBirth} onChange={setDateOfBirth} inputProps={{ type: 'date' }} />
       <InputForm label="Photo" value={photo} onChange={setPhoto} inputProps={{ type: 'file' }} />
       <br />
       <Button label="Submit" onClick={submitValues} />

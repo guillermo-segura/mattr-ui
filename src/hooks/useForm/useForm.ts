@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import axios from 'axios';
+import mattrApi from '../../api/mattr';
 
 interface Values {
   givenName: string;
   email: string;
-  country: string;
-  birthdate: string;
+  countryOfResidence: string;
+  dateOfBirth: string;
   photo: string;
 };
 
@@ -13,8 +13,8 @@ export interface UseForm {
   values: Values;
   setGivenName: (value: string) => void,
   setEmail: (value: string) => void,
-  setCountry: (value: string) => void,
-  setBirthdate: (value: string) => void,
+  setCountryOfResidence: (value: string) => void,
+  setDateOfBirth: (value: string) => void,
   setPhoto: (value: string) => void,
   submitValues: () => void;
 }
@@ -22,35 +22,29 @@ export interface UseForm {
 const useForm = (): UseForm => {
   const [givenName, setGivenName] = useState('');
   const [email, setEmail] = useState('');
-  const [country, setCountry] = useState('');
-  const [birthdate, setBirthdate] = useState('');
+  const [countryOfResidence, setCountryOfResidence] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
   const [photo, setPhoto] = useState('');
 
   const values = {
     givenName,
     email,
-    country,
-    birthdate,
+    countryOfResidence,
+    dateOfBirth,
     photo,
   };
 
   const submitValues = () => {
     console.log('Values submitted', values);
-    axios.post('http://localhost:3001/api/issue-credential', {
-      givenName: '',
-      email: '',
-      countryOfResidence: '',
-      dateOfBirth: '',
-      photo: '',
-    });
+    mattrApi.post('/api/issue-credential', values);
   };
 
   return {
     values,
     setGivenName,
     setEmail,
-    setCountry,
-    setBirthdate,
+    setCountryOfResidence,
+    setDateOfBirth,
     setPhoto,
     submitValues,
   };
