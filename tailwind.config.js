@@ -10,6 +10,7 @@ module.exports = {
         'mattr-grey-dark': '#333233',
         'mattr-grey': '#635E61',
         'mattr-grey-light': '#DEDEDE',
+        'mattr-red': '#EC2A7B',
       },
     },
   },

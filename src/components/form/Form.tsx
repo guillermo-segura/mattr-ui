@@ -25,30 +25,35 @@ const Form = () => {
   return (
     <div className={css.container} data-testid="form-container">
       <InputForm
+        required
         label="Given name"
         value={givenName}
         onChange={setGivenName}
         inputProps={{ type: 'email', placeholder: 'E.g. John Doe' }}
       />
       <InputForm
+        required
         label="Email"
         value={email}
         onChange={setEmail}
         inputProps={{ type: 'email', placeholder: 'john@email.com' }}
       />
       <InputForm
+        required
         label="Country of residence"
         value={countryOfResidence}
         onChange={setCountryOfResidence}
         inputProps={{ placeholder: 'New Zealand' }}
       />
       <InputForm
+        required
         label="Date of birth"
         value={dateOfBirth}
         onChange={setDateOfBirth}
         inputProps={{ type: 'date' }}
       />
       <InputForm
+        required
         label="Photo"
         value={photo}
         onChange={setPhoto}
