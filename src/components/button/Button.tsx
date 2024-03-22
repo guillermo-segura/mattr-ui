@@ -5,12 +5,10 @@ export interface ButtonProps {
   onClick: () => void;
 };
 
-const Button = ({ label, onClick }: ButtonProps): JSX.Element => {
-  return (
-    <button className={css.button} onClick={onClick}>
-      {label}
-    </button>
-  );
-};
+const Button = ({ label, onClick }: ButtonProps): JSX.Element => (
+  <button className={css.button} onClick={onClick}>
+    {label}
+  </button>
+);
 
 export default Button;
